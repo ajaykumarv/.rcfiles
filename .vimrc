@@ -8,6 +8,7 @@ set ignorecase
 set number
 set backspace=indent,eol,start
 set mouse=a
+set splitright
 
 set path=$PATH/**
 set wildmenu
