@@ -1,0 +1,20 @@
+[user]
+	name = Ajay Vundyala
+	email = 
+[oh-my-zsh]
+	hide-status = 1
+[diff]
+    tool = vimdiff
+    #tool = meld
+    # Be able to abort all diffs with :cq or :cquit
+    trustExitCode = true
+[alias]
+    s = status
+    d = difftool -y -b -w
+    b = branch  
+    fd = "!f() { git d "$1^" "$1" `git diff --name-only "$1^" "$1"| xargs grep -L 'DO NOT EDIT'`; }; f"
+
+[mergetool]
+	trustExitCode = true
+[difftool]
+	trustExitCode = true
