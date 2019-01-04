@@ -27,6 +27,8 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'townk/vim-autoclose'
+Plugin 'mileszs/ack.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,6 +48,9 @@ filetype plugin indent on    " required
 let g:clang_library_path='/home/ajay/.vim/bundle/YouCompleteMe/third_party/ycmd/libclang.so.3.9' 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+"ack/ag
+let g:ackprg = "ag --nogroup --nocolor --column"
+noremap <leader>s :Ack! "<cword>"<cr>
 
 syntax on
 set tabstop=4
