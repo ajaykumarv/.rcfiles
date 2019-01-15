@@ -71,6 +71,9 @@ set wildignore+=*/.git/*,*  /.hg/*,*/.svn/*
 
 "ctrlp
 let g:ctrlp_clear_cache_on_exit=0
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 "NerdTree
 map <C-n> :NerdTreeToggle<CR>
